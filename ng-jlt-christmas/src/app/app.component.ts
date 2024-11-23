@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {WordleComponent} from './wordle/wordle.component';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  ngOnInit(): void {
+    console.log('AppComponent');
+  }
+
   title = 'ng-jlt-christmas';
 }

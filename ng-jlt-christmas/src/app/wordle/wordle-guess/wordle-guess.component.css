@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.guess-letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  font-size: 3rem;
+  width: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: white;
+  border-radius: 0.75rem;
+}
+
+:not(.correct,.incorrect,.wrong-position) {
+  border: 1px solid black;
+  color: black;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: darkgray;
+}
+
+.wrong-position {
+  background-color: darkorange;
+}

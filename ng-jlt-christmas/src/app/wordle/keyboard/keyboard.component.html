@@ -1,0 +1,17 @@
+<div class="row-1">
+  @for (letter of row1; track letter) {
+    <app-letter (click)="onClicked(letter)" [letter]="letter | triedOrDefault: triedLetters"></app-letter>
+  }
+</div>
+<div class="row-2">
+
+  @for (letter of row2; track letter) {
+    <app-letter (click)="onClicked(letter)" [letter]="letter | triedOrDefault: triedLetters"></app-letter>
+  }
+
+</div>
+<div class="row-3">
+  @for (letter of row3; track letter) {
+    <app-letter (click)="onClicked(letter)" [letter]="letter | triedOrDefault: triedLetters"></app-letter>
+  }
+</div>

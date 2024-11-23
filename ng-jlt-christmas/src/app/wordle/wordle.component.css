@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+app-wordle-guess {
+  margin-top: 0.5rem;
+}
+p,h1 {
+  color: white;
+}

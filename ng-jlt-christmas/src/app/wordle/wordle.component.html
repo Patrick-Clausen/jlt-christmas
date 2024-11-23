@@ -1,0 +1,6 @@
+<h1>Level 1/?</h1>
+<p>Denne person har koden til at komme videre.</p>
+<app-keyboard [triedLetters]="triedLetters" (clicked)="onKeyboardClick($event)"></app-keyboard>
+@for (guess of guesses | reverse; track guess) {
+  <app-wordle-guess [guess]="guess"></app-wordle-guess>
+}
