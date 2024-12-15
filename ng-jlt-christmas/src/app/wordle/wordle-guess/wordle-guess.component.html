@@ -1,6 +1,0 @@
-@for (letter of guess.letters; track letter) {
-  <div class="guess-letter"
-       [ngClass]="{'correct': letter.correct, 'incorrect': letter.incorrect, 'wrong-position': letter.wrong_position}">
-    {{ letter.letter ?? "" }}
-  </div>
-}
