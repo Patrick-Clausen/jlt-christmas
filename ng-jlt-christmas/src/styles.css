@@ -13,7 +13,7 @@ html, body {
 }
 body {
   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-  *:not(b,strong) { box-sizing: border-box;  display: block; }
+  *:not(b,strong,script) { box-sizing: border-box;  display: block; }
 }
 
 

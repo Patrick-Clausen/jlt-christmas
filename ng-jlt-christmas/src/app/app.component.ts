@@ -8,11 +8,7 @@ import {WordleComponent} from './wordle/wordle.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-
-  ngOnInit(): void {
-    console.log('AppComponent');
-  }
+export class AppComponent{
 
   title = 'ng-jlt-christmas';
 }

@@ -1,23 +1,27 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {DateTime} from 'luxon';
+import {EMPTY, interval, map, NEVER, Observable} from 'rxjs';
+import {AsyncPipe, isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-result',
-  imports: [],
+  imports: [
+    AsyncPipe
+  ],
   templateUrl: './result.component.html',
   styleUrl: './result.component.css'
 })
 export class ResultComponent implements OnInit {
-  public countdown: string;
+  public countdown: Observable<string> = NEVER;
 
-  constructor() {
-    this.countdown = this.calculateCountdown();
+  constructor(@Inject(PLATFORM_ID) private platformId: string) {
   }
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.countdown = this.calculateCountdown();
-    }, 500)
+    if (isPlatformBrowser(this.platformId)) {
+      this.countdown = interval(500)
+        .pipe(map(() => this.calculateCountdown()));
+    }
   }
 
   calculateCountdown(): string {
